@@ -18,6 +18,15 @@
         header {
             background-color: #8B4513;
             padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header img {
+            margin-right: 20px;
+        }
+        header h1 {
+            flex-grow: 1;
             text-align: center;
         }
         nav a {
@@ -51,11 +60,32 @@
                 flex: 1 1 100%;
             }
         }
+        .contact-form {
+            background-color: #8B4513;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            background-color: #FFD700;
+            color: #8B4513;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo com a palavra ChocoShow.png" alt="Logo ChocoShow" width="100" height="100">
+        <img src="logo.png" alt="Logo ChocoShow" width="100" height="100">
         <h1>ChocoShow</h1>
         <nav>
             <a href="#home">Home</a>
@@ -114,6 +144,17 @@
         <h2>Contatos</h2>
         <p>WhatsApp: (31) 99261-3347 - Kelly</p>
         <p>WhatsApp: (31) 98732-0889 - Luciano</p>
+    </section>
+
+    <section id="mensagem">
+        <h2>Envie uma Mensagem</h2>
+        <div class="contact-form">
+            <form action="https://api.whatsapp.com/send" method="get" target="_blank">
+                <input type="hidden" name="phone" value="5531992613347">
+                <input type="text" name="text" placeholder="Digite sua mensagem aqui">
+                <button type="submit">Enviar via WhatsApp</button>
+            </form>
+        </div>
     </section>
 </body>
 </html>
